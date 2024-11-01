@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="vertical-menu-template-free">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Ejecutivo de Computadoras - Dashboard</title>
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/core.css">
+    <link rel="stylesheet" href="assets/vendor/css/theme-default.css">
+    <link rel="stylesheet" href="assets/css/demo.css">
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .embed-responsive-16by9 {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .embed-responsive-16by9 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <!-- Menu Logo -->
+                <div class="app-brand demo">
+                    <a href="#" class="app-brand-link">
+                        <span class="app-brand-logo demo">
+                            <img src="assets/img/logo.png" alt="Logo AGRISYSTEMS" width="200">
+                        </span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="layout-page">
+                <!-- Navbar -->
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
+                    <div class="container-fluid">
+                        <h4 class="fw-bold mb-0">Informe Ejecutivo de Computadoras</h4>
+                    </div>
+                </nav>
+
+                <!-- Dashboard Content -->
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center">
+                                    <h5 class="card-title mb-0">
+                                        <i class="bx bx-info-circle text-primary me-2"></i> Resumen del Dashboard
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Este dashboard proporciona una visión actualizada del estado de los equipos en función de su prioridad de atención y estado operativo. El informe incluye análisis sobre la frecuencia y tipo de fallos, la seguridad y antigüedad de los dispositivos, y las recomendaciones para su optimización. Los datos se actualizan en tiempo real, asegurando una supervisión continua de las necesidades tecnológicas de la empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Responsive Embedded Dashboard -->
+                        <div class="col-lg-12 mb-4">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe title="DASHBOARD" src="https://app.powerbi.com/view?r=eyJrIjoiZTkxMDMzODUtZmE3ZS00ZDE0LWEyYjktZjdmZmYwOWQ3Mzk0IiwidCI6IjVmNTNiNGNlLTYzZDQtNGVlOC04OGQyLTIyZjBiMmQ0YjI3YSIsImMiOjR9&pageName=ReportSection" allowFullScreen></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Dashboard Button -->
+                        <div class="col-lg-12 text-center">
+                            <a href="https://app.powerbi.com/links/9qqRUZdXtj?ctid=5f53b4ce-63d4-4ee8-88d2-22f0b2d4b27a&pbi_source=linkShare" class="btn btn-primary btn-lg" target="_blank">
+                                <i class="bx bx-bar-chart-alt-2"></i> Ver Dashboard Completo en Power BI
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JS -->
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

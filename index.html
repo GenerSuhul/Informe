@@ -36,15 +36,43 @@
             height: 100%;
             border: 0;
         }
+
+        /* Ajustes para la responsividad */
+        @media (max-width: 768px) {
+            #layout-menu {
+                display: none; /* Oculta el menú lateral en pantallas pequeñas */
+            }
+            .layout-page {
+                margin-left: 0; /* Ajusta el margen en pantallas pequeñas */
+            }
+            .layout-navbar h4 {
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+            }
+            .layout-navbar h4 img {
+                width: 200px; /* Ajusta el tamaño del logo */
+                height: auto;
+                margin-right: 8px;
+                vertical-align: middle;
+            }
+            .menu-toggle-btn {
+                display: inline-block;
+                font-size: 1.5rem;
+                color: #007bff;
+                background: none;
+                border: none;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
-            <!-- Menu -->
+            <!-- Menu lateral (se oculta en pantallas pequeñas) -->
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-                <!-- Menu Logo -->
+                <!-- Logo en el menú lateral -->
                 <div class="app-brand demo">
                     <a href="#" class="app-brand-link">
                         <span class="app-brand-logo demo">
@@ -54,12 +82,16 @@
                 </div>
             </aside>
 
-            <!-- Content -->
+            <!-- Contenido de la página -->
             <div class="layout-page">
-                <!-- Navbar -->
+                <!-- Navbar (con botón de menú para pantallas pequeñas) -->
                 <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
-                    <div class="container-fluid">
-                        <h4 class="fw-bold mb-0">Informe Ejecutivo de Computadoras</h4>
+                    <div class="container-fluid">                 
+                        <!-- Título del Navbar con logo en pantallas pequeñas -->
+                        <h4 class="fw-bold mb-0">
+                            <img src="assets/img/logo.png" alt="Logo AGRISYSTEMS" class="d-inline d-md-none"> 
+                            Informe Ejecutivo de Computadoras
+                        </h4>
                     </div>
                 </nav>
 
@@ -103,5 +135,13 @@
     <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="assets/vendor/js/menu.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Script para abrir/cerrar el menú en pantallas pequeñas -->
+    <script>
+        function toggleMenu() {
+            const layoutMenu = document.getElementById('layout-menu');
+            layoutMenu.style.display = layoutMenu.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>

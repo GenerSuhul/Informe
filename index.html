@@ -1,221 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotización - Hechos 2</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            padding: 20px 0;
-            background-color: #343a40;
-            color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        header h1::before {
-            content: "";
-            display: inline-block;
-            margin-right: 10px;
-            width: 40px;
-            height: 40px;
-            background: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/shield-lock.svg') no-repeat center;
-            background-size: cover;
-        }
-        header h2 {
-            font-size: 1.2rem;
-            font-style: italic;
-        }
-        .table th {
-            background-color: #6c757d;
-            color: #fff;
-        }
-        .highlight {
-            background-color: #d1ecf1;
-        }
-        footer {
-            padding: 15px 0;
-            margin-top: 20px;
-            background-color: #343a40;
-            color: #fff;
-            border-radius: 8px;
-        }
-        .info {
-            background-color: #e2e3e5;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-        .info::before {
-            content: "";
-            display: inline-block;
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
-            background: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/info-circle-fill.svg') no-repeat center;
-            background-size: cover;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            header h2 {
-                font-size: 1rem;
-            }
-            .info {
-                font-size: 0.95rem;
-            }
-        }
-        @media (max-width: 576px) {
-            header h1 {
-                font-size: 1.5rem;
-                text-align: center;
-            }
-            .info {
-                font-size: 0.9rem;
-                text-align: justify;
-            }
-            .table {
-                font-size: 0.8rem;
-                overflow-x: auto;
-                display: block;
-                width: 100%;
-            }
-            .table th, .table td {
-                white-space: nowrap;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Presupuesto - Instalación de Cámaras</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .header {
+      background: linear-gradient(to right, #ff7700, #ff903b);
+      color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .dashboard-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="text-center">
-            <h1>Computek</h1>
-            <h2>Innovación y seguridad a tu alcance</h2>
-        </header>
-
-        <main>
-            <h2 class="text-center my-4">Cotización para: Hechos 2</h2>
-            <div class="info">
-                <p><strong>Nota:</strong> La instalación incluye la configuración para la visualización de las cámaras en dispositivos como laptops, teléfonos y más, según las necesidades del cliente.</p>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Cantidad</th>
-                            <th>Descripción</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Precio Unitario (Q)</th>
-                            <th>Subtotal (Q)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>Cámara Bala</td>
-                            <td>Hilook by Hikvision</td>
-                            <td>THC-B120-PC</td>
-                            <td>145.00</td>
-                            <td>290.00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Cámara Domo</td>
-                            <td>Hilook by Hikvision</td>
-                            <td>THC-T120-PC</td>
-                            <td>140.00</td>
-                            <td>280.00</td>
-                        </tr>
-                        <tr>
-                            <td>80</td>
-                            <td>Metro de Cable UTP CAT5</td>
-                            <td>ETOUCH</td>
-                            <td>N/A</td>
-                            <td>3.50</td>
-                            <td>280.00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Disco Duro</td>
-                            <td>Western Digital Purple</td>
-                            <td>1 TB</td>
-                            <td>500.00</td>
-                            <td>500.00</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Pareja de voltaje</td>
-                            <td>N/A</td>
-                            <td>Hembra y Macho</td>
-                            <td>7.00</td>
-                            <td>28.00</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Transformador 12VDC, 1 amperio</td>
-                            <td>SYSTEK</td>
-                            <td>N/A</td>
-                            <td>20.00</td>
-                            <td>80.00</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Video Baluns</td>
-                            <td>Hikvision</td>
-                            <td>DS-1H18S/E</td>
-                            <td>25.00</td>
-                            <td>100.00</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>DVR 8 Canales</td>
-                            <td>Hilook</td>
-                            <td>DVR-108G-M1</td>
-                            <td>458.00</td>
-                            <td>458.00</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td colspan="6"><strong>Regalos incluidos:</strong> 1 cable HDMI (3m), 1 cable de red UTP, 1 regleta</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="5"><strong>Subtotal de productos:</strong></td>
-                            <td>2,016.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><strong>Instalación (Q100 por cámara):</strong></td>
-                            <td>400.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5"><strong>Total General:</strong></td>
-                            <td><strong>2,416.00</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </main>
-
-        <footer class="text-center">
-            <p>&copy; 2024 Computek - Innovación y seguridad al alcance de todos.</p>
-        </footer>
+  <div class="container py-4">
+    <div class="header text-center">
+      <div class="dashboard-title">Dashboard de Presupuesto y Justificación Técnica</div>
+      <p>Instalación de Sistema de Videovigilancia - Proyectos Bodega y Renova_2</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Proyecto Bodega -->
+    <div class="card p-4">
+      <h4 class="mb-3 text-primary"><i class="bi bi-building"></i> Proyecto: Bodega</h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">Cámaras bala 5MP ColorVu con audio (Q246.00 c/u) <span>8 (Q1,968.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">DVR Hikvision 16 canales (Q1,698.00 c/u) <span>1 (Q1,698.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Transformador 12VDC 2A (Q19.00 c/u) <span>8 (Q152.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Balun pasivo HD (Q16.00 c/u) <span>8 (Q128.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Conector macho-hembra alimentación (Q7.00 c/u) <span>8 (Q56.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Disco duro 4TB (Q848.00 c/u) <span>1 (Q848.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Control de acceso facial Hikvision (Q564.00 c/u) <span>1 (Q564.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Gabinete 04 RMS (Q854.00 c/u) <span>1 (Q854.00)</span></li>
+      </ul>
+      <p><strong>Total Proyecto Bodega:</strong> <span class="fw-bold text-success">Q6,268.00</span></p>
+      <p><strong>Justificación:</strong> Cobertura de zonas clave, control de ingreso con biometría facial, protección estructural y almacenamiento de hasta 20 días.</p>
+    </div>
+
+    <!-- Proyecto Renova_2 -->
+    <div class="card p-4">
+      <h4 class="mb-3 text-success"><i class="bi bi-building-fill"></i> Proyecto: Renova_2</h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">Cámaras bala 5MP ColorVu con audio (Q246.00 c/u) <span>4 (Q984.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Cámaras bala 2MP (Q135.00 c/u) <span>2 (Q270.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Cámara domo 3K con audio (Q257.00 c/u) <span>1 (Q257.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">DVR Hikvision 16 canales (Q1,698.00 c/u) <span>1 (Q1,698.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Transformador 12VDC 2A (Q19.00 c/u) <span>7 (Q133.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Balun pasivo HD (Q16.00 c/u) <span>7 (Q112.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Conector macho-hembra alimentación (Q7.00 c/u) <span>7 (Q49.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Disco duro 4TB (Q848.00 c/u) <span>1 (Q848.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Gabinete 04 RMS (Q854.00 c/u) <span>1 (Q854.00)</span></li>
+      </ul>
+      <p><strong>Total Proyecto Renova_2:</strong> <span class="fw-bold text-success">Q5,205.00</span></p>
+      <p><strong>Justificación:</strong> Instalación interior y exterior con respaldo de grabación, integración estructurada y protección de equipos en gabinete.</p>
+    </div>
+
+    <!-- Stock adicional -->
+    <div class="card p-4">
+      <h4 class="mb-3 text-warning"><i class="bi bi-box"></i> Equipos para Stock y Contingencia</h4>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">Cámara bala 2MP (stock) (Q135.00 c/u) <span>2 (Q270.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Bobina cable UTP exterior (Q526.00 c/u) <span>1 (Q526.00)</span></li>
+        <li class="list-group-item d-flex justify-content-between">Bobina cable UTP interior (Q266.00 c/u) <span>1 (Q266.00)</span></li>
+      </ul>
+      <p><strong>Total Equipos en Stock:</strong> <span class="fw-bold text-success">Q1,062.00</span></p>
+      <p><strong>Justificación:</strong> Provisión de respaldo ante fallos o futuras expansiones, asegurando continuidad operativa.</p>
+    </div>
+
+    <!-- Total General (recalculado sin cámara ojo de pez) -->
+    <div class="card p-4">
+      <h5 class="mb-3 text-dark"><i class="bi bi-calculator-fill"></i> Total General del Proyecto</h5>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between">Total Proyecto Bodega <span>Q6,268.00</span></li>
+        <li class="list-group-item d-flex justify-content-between">Total Proyecto Renova_2 <span>Q5,205.00</span></li>
+        <li class="list-group-item d-flex justify-content-between">Total Stock y Contingencia <span>Q1,062.00</span></li>
+      </ul>
+      <p class="mt-2"><strong>Total Final: </strong> <span class="fw-bold text-primary">Q12,683.00</span></p>
+    </div>
+
+    <!-- Diagrama -->
+    <div class="card p-4">
+      <h5 class="mb-3"><i class="bi bi-map"></i> Diagrama General Bodega Puertas</h5>
+      <img src="asset/BODEGA_PUERTAS.png" class="img-fluid rounded" alt="Diagrama de ubicación">
+      <p class="mt-2">Imagen representativa. El diagrama final será generado con base en el diseño de campo.</p>
+    </div>
+  </div>
 </body>
+
 </html>
